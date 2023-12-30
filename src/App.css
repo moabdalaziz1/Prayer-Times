@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'ElMessiri';
+  src: url('/fonts/ElMessiri-Regular.ttf');
+}
+
+html {
+  direction: rtl;
+}
+body {
+  font-family: 'ElMessiri';
+  overflow-x: hidden;
+}
+
+.MuiTypography-root, 
+.MuiFormLabel-root, 
+.MuiButtonBase-root, 
+#demo-simple-select {
+  font-family: 'ElMessiri' !important;
+}
+
+.MuiOutlinedInput-notchedOutline { 
+  border-color: #fff !important;
+}
+
+.css-14lo706 {
+  width: 52px !important;
+}
+
+.MuiSvgIcon-root  {
+  font-size: 1.7rem !important;
+  color: #fff !important;
+}
+
+
