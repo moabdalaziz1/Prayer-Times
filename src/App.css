@@ -1,13 +1,14 @@
 @font-face {
-  font-family: 'ElMessiri';
-  src: url('/fonts/ElMessiri-Regular.ttf');
+  font-family: 'pageGenFont';
+  src: url('/fonts/ArefRuqaa-Regular.ttf');
 }
 
 html {
   direction: rtl;
 }
 body {
-  font-family: 'ElMessiri';
+  font-family: 'pageGenFont';
+  font-size: 18px;
   overflow-x: hidden;
 }
 
@@ -15,20 +16,24 @@ body {
 .MuiFormLabel-root, 
 .MuiButtonBase-root, 
 #demo-simple-select {
-  font-family: 'ElMessiri' !important;
+  font-family: 'pageGenFont' !important;
 }
 
 .MuiOutlinedInput-notchedOutline { 
   border-color: #fff !important;
 }
-
 .css-14lo706 {
-  width: 52px !important;
+  width: 46px !important;
 }
 
 .MuiSvgIcon-root  {
   font-size: 1.7rem !important;
   color: #fff !important;
+}
+
+/* List Item styling the span inside it */
+.css-10hburv-MuiTypography-root {
+  font-size: 30px;
 }
 
 

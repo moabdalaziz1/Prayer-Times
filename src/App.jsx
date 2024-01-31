@@ -13,7 +13,6 @@ function App() {
       <Container 
         maxWidth='lg' 
         sx={{
-          paddingBottom: {md: '100px', xs: '200px'},
           paddingRight: '0px'
         }}
       >
