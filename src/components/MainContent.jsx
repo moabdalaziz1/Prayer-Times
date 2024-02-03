@@ -114,7 +114,7 @@ const MainContent = () => {
     return () => clearInterval(interval)
   }, [timings])
 
-  // The Function For The Couuntdown Timer.
+  // The Function For The Couuntdown Timer For The Next Prayer.
   const setUpCountdownTimer = () => {
     const momentNow = moment()
     let prayerIndex = null;
@@ -145,10 +145,12 @@ const MainContent = () => {
     setNextPrayerIndex(prayerIndex)
     const nextPrayerObject = nextPrayer[prayerIndex]
     const nextPrayerTime = timings[nextPrayerObject.key]
-    const nextPrayerTimeMoment = moment(nextPrayer, 'hh:mm')
+    const nextPrayerTimeMoment = moment(nextPrayerTime, 'hh:mm')
 
     let remainimgTime = (moment(nextPrayerTime, 'hh:mm')).diff(momentNow)
 
+
+    // The logic to solve and calculate the remainigTime between (Isha && Fajr)
     if (remainimgTime < 0) {
       const midnightDiff = moment("23:59:59","hh:mm:ss").diff(momentNow);
       const fajrToMidnightDiff = nextPrayerTimeMoment.diff(moment("00:00:00","hh:mm:ss"))
@@ -191,7 +193,7 @@ const MainContent = () => {
       name: 'الظهر',
       time: timings.Dhuhr,
       img: '/images/fajr-prayer.png',
-      sona: 'أربع ركعات قبل صلاة الظهر وركعتان بعدها كـ سُنه مؤكده ،، ومُستحب إضافة ركعتان بعد الصلاة '
+      sona: 'أربع ركعات قبل صلاة الظهر وركعتان بعدها كـ سُنه مؤكده ،، ومُستحب إضافة ركعتان أيضاً بعد الصلاة '
     },
     {
       id: 3,
@@ -205,17 +207,16 @@ const MainContent = () => {
       name: 'المغرب',
       time: timings.Maghrib,
       img: '/images/sunset-prayer-mosque.png',
-      sona: 'ركعتان بعد صلاة المغرب كـ سُنه مؤكده ،، ومُستحب إضافة ركعتان بعد الصلاة '
+      sona: 'ركعتان بعد صلاة المغرب كـ سُنه مؤكده ،، ومُستحب إضافة ركعتان أيضاً بعد الصلاة '
     },
     {
       id: 5,
       name: 'العشاء',
       time: timings.Isha,
       img: '/images/night-prayer-mosque.png',
-      sona: 'ركعتان بعد صلاة العشاء كـ سُنه مؤكده ،، ومُستحب إضافة ركعتان بعد الصلاة وتُختم الصلاة بالوتر '
+      sona: 'ركعتان بعد صلاة العشاء كـ سُنه مؤكده ،، ومُستحب إضافة ركعتان أيضاً بعد الصلاة وتُختم الصلاة بالوتر '
     },
   ]
-
   // Azkar Data
   const Azkar = [
     {
